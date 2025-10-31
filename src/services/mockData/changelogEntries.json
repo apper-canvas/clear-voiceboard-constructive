@@ -1,0 +1,42 @@
+[
+  {
+    "Id": 1,
+    "title": "Export Data Functionality Released",
+    "description": "Users can now export their submitted requests, votes, and comments in CSV or JSON format. Perfect for personal record keeping and data analysis.",
+    "relatedPostIds": ["4"],
+    "releaseDate": "2024-01-25T13:15:00Z",
+    "category": "Data"
+  },
+  {
+    "Id": 2,
+    "title": "Rich Text Editor Now Available",
+    "description": "The description field now supports rich text formatting including bold, italic, links, and code blocks. This makes feature requests much clearer and more detailed.",
+    "relatedPostIds": ["8"],
+    "releaseDate": "2024-01-24T14:50:00Z",
+    "category": "UI/UX"
+  },
+  {
+    "Id": 3,
+    "title": "Enhanced Comment Threading",
+    "description": "Comments now support nested replies with better visual hierarchy. This improves discussion flow and makes conversations easier to follow.",
+    "relatedPostIds": [],
+    "releaseDate": "2024-01-20T16:30:00Z",
+    "category": "Community"
+  },
+  {
+    "Id": 4,
+    "title": "Improved Vote Visualization",
+    "description": "Vote buttons now have smoother animations and better visual feedback. The voting experience feels more responsive and engaging.",
+    "relatedPostIds": [],
+    "releaseDate": "2024-01-18T12:45:00Z",
+    "category": "UI/UX"
+  },
+  {
+    "Id": 5,
+    "title": "Performance Optimizations",
+    "description": "Significant improvements to page load times and search responsiveness. The platform now handles large datasets much more efficiently.",
+    "relatedPostIds": [],
+    "releaseDate": "2024-01-15T10:20:00Z",
+    "category": "Performance"
+  }
+]

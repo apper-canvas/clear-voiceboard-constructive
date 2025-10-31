@@ -1,0 +1,32 @@
+[
+  {
+    "Id": 1,
+    "postId": "1",
+    "userId": "user123",
+    "votedAt": "2024-01-16T10:30:00Z"
+  },
+  {
+    "Id": 2,
+    "postId": "2",
+    "userId": "user456",
+    "votedAt": "2024-01-15T14:20:00Z"
+  },
+  {
+    "Id": 3,
+    "postId": "3",
+    "userId": "user123",
+    "votedAt": "2024-01-14T09:45:00Z"
+  },
+  {
+    "Id": 4,
+    "postId": "1",
+    "userId": "user789",
+    "votedAt": "2024-01-18T16:15:00Z"
+  },
+  {
+    "Id": 5,
+    "postId": "5",
+    "userId": "user123",
+    "votedAt": "2024-01-12T11:30:00Z"
+  }
+]

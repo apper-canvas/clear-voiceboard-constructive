@@ -1,0 +1,51 @@
+[
+  {
+    "Id": 1,
+    "feedbackPostId": "1",
+    "stage": "in-progress",
+    "position": 1,
+    "estimatedDate": "2024-03-15"
+  },
+  {
+    "Id": 2,
+    "feedbackPostId": "2",
+    "stage": "planned",
+    "position": 1,
+    "estimatedDate": "2024-04-30"
+  },
+  {
+    "Id": 3,
+    "feedbackPostId": "5",
+    "stage": "planned",
+    "position": 2,
+    "estimatedDate": "2024-05-15"
+  },
+  {
+    "Id": 4,
+    "feedbackPostId": "9",
+    "stage": "planned",
+    "position": 3,
+    "estimatedDate": "2024-06-30"
+  },
+  {
+    "Id": 5,
+    "feedbackPostId": "6",
+    "stage": "in-progress",
+    "position": 2,
+    "estimatedDate": "2024-03-30"
+  },
+  {
+    "Id": 6,
+    "feedbackPostId": "4",
+    "stage": "completed",
+    "position": 1,
+    "estimatedDate": "2024-01-25"
+  },
+  {
+    "Id": 7,
+    "feedbackPostId": "8",
+    "stage": "completed",
+    "position": 2,
+    "estimatedDate": "2024-01-24"
+  }
+]
