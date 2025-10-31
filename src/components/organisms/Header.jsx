@@ -8,7 +8,8 @@ import SubmitModal from "@/components/organisms/SubmitModal";
 
 const Header = () => {
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const { logout } = useAuth();
   const location = useLocation();
 
   const navItems = [
@@ -70,8 +71,7 @@ const Header = () => {
             {/* Submit Button & Mobile Menu */}
 <div className="flex items-center space-x-3">
               <Button
-                onClick={() => {
-                  const { logout } = useAuth();
+onClick={() => {
                   logout();
                 }}
                 variant="outline"
