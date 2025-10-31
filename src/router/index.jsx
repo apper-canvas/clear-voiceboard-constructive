@@ -1,7 +1,13 @@
 import { createBrowserRouter } from "react-router-dom";
 import { Suspense, lazy } from "react";
+import Root from "@/layouts/Root";
 import Layout from "@/components/organisms/Layout";
-
+const Login = lazy(() => import("@/pages/Login"));
+const Signup = lazy(() => import("@/pages/Signup"));
+const Callback = lazy(() => import("@/pages/Callback"));
+const ErrorPage = lazy(() => import("@/pages/ErrorPage"));
+const ResetPassword = lazy(() => import("@/pages/ResetPassword"));
+const PromptPassword = lazy(() => import("@/pages/PromptPassword"));
 const FeedbackBoard = lazy(() => import("@/components/pages/FeedbackBoard"));
 const Roadmap = lazy(() => import("@/components/pages/Roadmap"));
 const RoadmapDetail = lazy(() => import("@/components/pages/RoadmapDetail"));
@@ -18,6 +24,57 @@ const LoadingFallback = () => (
     </div>
   </div>
 );
+
+const authRoutes = [
+  {
+    path: "login",
+    element: (
+      <Suspense fallback={<LoadingFallback />}>
+        <Login />
+      </Suspense>
+    ),
+  },
+  {
+    path: "signup",
+    element: (
+      <Suspense fallback={<LoadingFallback />}>
+        <Signup />
+      </Suspense>
+    ),
+  },
+  {
+    path: "callback",
+    element: (
+      <Suspense fallback={<LoadingFallback />}>
+        <Callback />
+      </Suspense>
+    ),
+  },
+  {
+    path: "error",
+    element: (
+      <Suspense fallback={<LoadingFallback />}>
+        <ErrorPage />
+      </Suspense>
+    ),
+  },
+  {
+    path: "reset-password/:appId/:fields",
+    element: (
+      <Suspense fallback={<LoadingFallback />}>
+        <ResetPassword />
+      </Suspense>
+    ),
+  },
+  {
+    path: "prompt-password/:appId/:emailAddress/:provider",
+    element: (
+      <Suspense fallback={<LoadingFallback />}>
+        <PromptPassword />
+      </Suspense>
+    ),
+  },
+];
 
 const mainRoutes = [
   {
@@ -36,7 +93,7 @@ const mainRoutes = [
         <Roadmap />
       </Suspense>
     ),
-},
+  },
   {
     path: "roadmap/:id",
     element: (
@@ -66,8 +123,15 @@ const mainRoutes = [
 const routes = [
   {
     path: "/",
-    element: <Layout />,
-    children: [...mainRoutes],
+    element: <Root />,
+    children: [
+      ...authRoutes,
+      {
+        path: "",
+        element: <Layout />,
+        children: [...mainRoutes],
+      },
+    ],
   },
 ];
 

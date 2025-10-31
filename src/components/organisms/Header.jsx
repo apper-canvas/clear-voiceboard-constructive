@@ -1,5 +1,6 @@
 import { useState } from "react";
 import { Link, useLocation } from "react-router-dom";
+import { useAuth } from "@/layouts/Root";
 import { motion, AnimatePresence } from "framer-motion";
 import ApperIcon from "@/components/ApperIcon";
 import Button from "@/components/atoms/Button";
@@ -67,7 +68,19 @@ const Header = () => {
             </nav>
 
             {/* Submit Button & Mobile Menu */}
-            <div className="flex items-center space-x-3">
+<div className="flex items-center space-x-3">
+              <Button
+                onClick={() => {
+                  const { logout } = useAuth();
+                  logout();
+                }}
+                variant="outline"
+                className="text-gray-700 hover:text-gray-900 border-gray-300"
+                size="sm"
+              >
+                <ApperIcon name="LogOut" className="h-4 w-4 mr-2" />
+                <span className="hidden sm:inline">Logout</span>
+              </Button>
               <Button
                 onClick={() => setIsModalOpen(true)}
                 className="bg-gradient-to-r from-primary to-purple-600 hover:from-primary/90 hover:to-purple-600/90 text-white shadow-lg hover:shadow-xl transform hover:scale-105 transition-all duration-200"
